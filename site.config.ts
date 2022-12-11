@@ -14,7 +14,7 @@ export default siteConfig({
   author: 'Bandos',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: "Bandos's Public Workbench",
 
   // social usernames (optional)
   twitter: 'bandos_1000',
