@@ -14,7 +14,7 @@ export default siteConfig({
   author: 'Bandos',
 
   // open graph metadata (optional)
-  description: "Bandos's Public Workspace.",
+  description: "Bandos's Public Workspace",
 
   // social usernames (optional)
   twitter: 'bandos_1000',
