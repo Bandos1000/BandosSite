@@ -1,5 +1,5 @@
-import { Analytics } from '@vercel/analytics/react';
-import { siteConfig } from './lib/site-config';
+import { Analytics } from '@vercel/analytics/react'
+import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
