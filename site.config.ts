@@ -1,3 +1,15 @@
+import { Analytics } from '@vercel/analytics/react';
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  );
+}
+
+export default MyApp;
 import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
@@ -19,7 +31,7 @@ export default siteConfig({
   // social usernames (optional)
   twitter: 'bandos_1000',
   github: 'Bandos1000',
-  //linkedin: 'fisch2',
+  //linkedin: '#',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
