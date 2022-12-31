@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../pages/api/search-notion.ts"],
+  "sourcesContent": ["import { NextApiRequest, NextApiResponse } from 'next'\n\nimport * as types from '../../lib/types'\nimport { search } from '../../lib/notion'\n\nexport default async (req: NextApiRequest, res: NextApiResponse) => {\n  if (req.method !== 'POST') {\n    return res.status(405).send({ error: 'method not allowed' })\n  }\n\n  const searchParams: types.SearchParams = req.body\n\n  console.log('<<< lambda search-notion', searchParams)\n  const results = await search(searchParams)\n  console.log('>>> lambda search-notion', results)\n\n  res.setHeader(\n    'Cache-Control',\n    'public, s-maxage=60, max-age=60, stale-while-revalidate=60'\n  )\n  res.status(200).json(results)\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAGA,oBAAuB;AAEvB,IAAO,wBAAQ,OAAO,KAAqB,QAAyB;AAClE,MAAI,IAAI,WAAW,QAAQ;AACzB,WAAO,IAAI,OAAO,GAAG,EAAE,KAAK,EAAE,OAAO,qBAAqB,CAAC;AAAA,EAC7D;AAEA,QAAM,eAAmC,IAAI;AAE7C,UAAQ,IAAI,4BAA4B,YAAY;AACpD,QAAM,UAAU,UAAM,sBAAO,YAAY;AACzC,UAAQ,IAAI,4BAA4B,OAAO;AAE/C,MAAI;AAAA,IACF;AAAA,IACA;AAAA,EACF;AACA,MAAI,OAAO,GAAG,EAAE,KAAK,OAAO;AAC9B;",
+  "names": []
+}

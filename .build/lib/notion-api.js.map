@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../lib/notion-api.ts"],
+  "sourcesContent": ["import { NotionAPI } from 'notion-client'\n\nexport const notion = new NotionAPI({\n  apiBaseUrl: process.env.NOTION_API_BASE_URL\n})\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,2BAA0B;AAEnB,MAAM,SAAS,IAAI,+BAAU;AAAA,EAClC,YAAY,QAAQ,IAAI;AAC1B,CAAC;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../lib/db.ts"],
+  "sourcesContent": ["import Keyv from '@keyvhq/core'\nimport KeyvRedis from '@keyvhq/redis'\n\nimport { isRedisEnabled, redisNamespace, redisUrl } from './config'\n\nlet db: Keyv\nif (isRedisEnabled) {\n  const keyvRedis = new KeyvRedis(redisUrl)\n  db = new Keyv({ store: keyvRedis, namespace: redisNamespace || undefined })\n} else {\n  db = new Keyv()\n}\n\nexport { db }\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,kBAAiB;AACjB,mBAAsB;AAEtB,oBAAyD;AAEzD,IAAI;AACJ,IAAI,8BAAgB;AAClB,QAAM,YAAY,IAAI,aAAAA,QAAU,sBAAQ;AACxC,OAAK,IAAI,YAAAC,QAAK,EAAE,OAAO,WAAW,WAAW,gCAAkB,OAAU,CAAC;AAC5E,OAAO;AACL,OAAK,IAAI,YAAAA,QAAK;AAChB;",
+  "names": ["KeyvRedis", "Keyv"]
+}

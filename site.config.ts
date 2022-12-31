@@ -1,16 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
-
-function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Component {...pageProps} />
-      <Analytics />
-    </>
-  );
-}
-
-export default MyApp;
-import { siteConfig } from './lib/site-config'
+import { siteConfig } from './lib/site-config';
 
 export default siteConfig({
   // the site's root Notion page (required)

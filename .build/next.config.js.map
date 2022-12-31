@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../next.config.js"],
+  "sourcesContent": ["// eslint-disable-next-line @typescript-eslint/no-var-requires\nconst withBundleAnalyzer = require('@next/bundle-analyzer')({\n  enabled: process.env.ANALYZE === 'true'\n})\n\nmodule.exports = withBundleAnalyzer({\n  staticPageGenerationTimeout: 300,\n  images: {\n    domains: [\n      'www.notion.so',\n      'notion.so',\n      'images.unsplash.com',\n      'pbs.twimg.com',\n      'abs.twimg.com',\n      's3.us-west-2.amazonaws.com',\n      'transitivebullsh.it'\n    ],\n    formats: ['image/avif', 'image/webp'],\n    dangerouslyAllowSVG: true,\n    contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"\n  }\n})\n"],
+  "mappings": "AACA,MAAM,qBAAqB,QAAQ,uBAAuB,EAAE;AAAA,EAC1D,SAAS,QAAQ,IAAI,YAAY;AACnC,CAAC;AAED,OAAO,UAAU,mBAAmB;AAAA,EAClC,6BAA6B;AAAA,EAC7B,QAAQ;AAAA,IACN,SAAS;AAAA,MACP;AAAA,MACA;AAAA,MACA;AAAA,MACA;AAAA,MACA;AAAA,MACA;AAAA,MACA;AAAA,IACF;AAAA,IACA,SAAS,CAAC,cAAc,YAAY;AAAA,IACpC,qBAAqB;AAAA,IACrB,uBAAuB;AAAA,EACzB;AACF,CAAC;",
+  "names": []
+}

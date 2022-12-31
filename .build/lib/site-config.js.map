@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../lib/site-config.ts"],
+  "sourcesContent": ["import * as types from './types'\n\nexport interface SiteConfig {\n  rootNotionPageId: string\n  rootNotionSpaceId?: string\n\n  name: string\n  domain: string\n  author: string\n  description?: string\n  language?: string\n\n  twitter?: string\n  github?: string\n  linkedin?: string\n  newsletter?: string\n  youtube?: string\n  zhihu?: string\n  mastodon?: string;\n\n  defaultPageIcon?: string | null\n  defaultPageCover?: string | null\n  defaultPageCoverPosition?: number | null\n\n  isPreviewImageSupportEnabled?: boolean\n  isTweetEmbedSupportEnabled?: boolean\n  isRedisEnabled?: boolean\n  isSearchEnabled?: boolean\n\n  includeNotionIdInUrls?: boolean\n  pageUrlOverrides?: types.PageUrlOverridesMap\n  pageUrlAdditions?: types.PageUrlOverridesMap\n\n  navigationStyle?: types.NavigationStyle\n  navigationLinks?: Array<NavigationLink>\n}\n\nexport interface NavigationLink {\n  title: string\n  pageId?: string\n  url?: string\n}\n\nexport const siteConfig = (config: SiteConfig): SiteConfig => {\n  return config\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AA2CO,MAAM,aAAa,CAAC,WAAmC;AAC5D,SAAO;AACT;",
+  "names": []
+}

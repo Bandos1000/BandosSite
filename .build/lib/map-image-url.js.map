@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../lib/map-image-url.ts"],
+  "sourcesContent": ["import { Block } from 'notion-types'\nimport { defaultMapImageUrl } from 'react-notion-x'\n\nimport { defaultPageCover, defaultPageIcon } from './config'\n\nexport const mapImageUrl = (url: string, block: Block) => {\n  if (url === defaultPageCover || url === defaultPageIcon) {\n    return url\n  }\n\n  return defaultMapImageUrl(url, block)\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACA,4BAAmC;AAEnC,oBAAkD;AAE3C,MAAM,cAAc,CAAC,KAAa,UAAiB;AACxD,MAAI,QAAQ,kCAAoB,QAAQ,+BAAiB;AACvD,WAAO;AAAA,EACT;AAEA,aAAO,0CAAmB,KAAK,KAAK;AACtC;",
+  "names": []
+}

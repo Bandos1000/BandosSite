@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../lib/get-page-tweet.ts"],
+  "sourcesContent": ["import { getPageProperty } from 'notion-utils'\n\nimport * as types from './types'\n\nexport function getPageTweet(\n  block: types.Block,\n  recordMap: types.ExtendedRecordMap\n): string | null {\n  return getPageProperty('Tweet', block, recordMap)\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,0BAAgC;AAIzB,SAAS,aACd,OACA,WACe;AACf,aAAO,qCAAgB,SAAS,OAAO,SAAS;AAClD;",
+  "names": []
+}

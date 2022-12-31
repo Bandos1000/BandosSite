@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../lib/get-canonical-page-id.ts"],
+  "sourcesContent": ["import { ExtendedRecordMap } from 'notion-types'\nimport {\n  getCanonicalPageId as getCanonicalPageIdImpl,\n  parsePageId\n} from 'notion-utils'\n\nimport { inversePageUrlOverrides } from './config'\n\nexport function getCanonicalPageId(\n  pageId: string,\n  recordMap: ExtendedRecordMap,\n  { uuid = true }: { uuid?: boolean } = {}\n): string | null {\n  const cleanPageId = parsePageId(pageId, { uuid: false })\n  if (!cleanPageId) {\n    return null\n  }\n\n  const override = inversePageUrlOverrides[cleanPageId]\n  if (override) {\n    return override\n  } else {\n    return getCanonicalPageIdImpl(pageId, recordMap, {\n      uuid\n    })\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACA,0BAGO;AAEP,oBAAwC;AAEjC,SAAS,mBACd,QACA,WACA,EAAE,OAAO,KAAK,IAAwB,CAAC,GACxB;AACf,QAAM,kBAAc,iCAAY,QAAQ,EAAE,MAAM,MAAM,CAAC;AACvD,MAAI,CAAC,aAAa;AAChB,WAAO;AAAA,EACT;AAEA,QAAM,WAAW,sCAAwB;AACzC,MAAI,UAAU;AACZ,WAAO;AAAA,EACT,OAAO;AACL,eAAO,oBAAAA,oBAAuB,QAAQ,WAAW;AAAA,MAC/C;AAAA,IACF,CAAC;AAAA,EACH;AACF;",
+  "names": ["getCanonicalPageIdImpl"]
+}

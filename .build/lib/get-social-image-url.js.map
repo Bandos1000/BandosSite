@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../lib/get-social-image-url.ts"],
+  "sourcesContent": ["import { api, host } from './config'\n\nexport function getSocialImageUrl(pageId: string) {\n  try {\n    const url = new URL(api.getSocialImage, host)\n\n    if (pageId) {\n      url.searchParams.set('id', pageId)\n      return url.toString()\n    }\n  } catch (err) {\n    console.warn('error invalid social image url', pageId, err.message)\n  }\n\n  return null\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,oBAA0B;AAEnB,SAAS,kBAAkB,QAAgB;AAChD,MAAI;AACF,UAAM,MAAM,IAAI,IAAI,kBAAI,gBAAgB,kBAAI;AAE5C,QAAI,QAAQ;AACV,UAAI,aAAa,IAAI,MAAM,MAAM;AACjC,aAAO,IAAI,SAAS;AAAA,IACtB;AAAA,EACF,SAAS,KAAP;AACA,YAAQ,KAAK,kCAAkC,QAAQ,IAAI,OAAO;AAAA,EACpE;AAEA,SAAO;AACT;",
+  "names": []
+}

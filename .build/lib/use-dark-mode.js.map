@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../lib/use-dark-mode.ts"],
+  "sourcesContent": ["import useDarkModeImpl from '@fisch0920/use-dark-mode'\n\nexport function useDarkMode() {\n  const darkMode = useDarkModeImpl(false, { classNameDark: 'dark-mode' })\n\n  return {\n    isDarkMode: darkMode.value,\n    toggleDarkMode: darkMode.toggle\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,2BAA4B;AAErB,SAAS,cAAc;AAC5B,QAAM,eAAW,qBAAAA,SAAgB,OAAO,EAAE,eAAe,YAAY,CAAC;AAEtE,SAAO;AAAA,IACL,YAAY,SAAS;AAAA,IACrB,gBAAgB,SAAS;AAAA,EAC3B;AACF;",
+  "names": ["useDarkModeImpl"]
+}
